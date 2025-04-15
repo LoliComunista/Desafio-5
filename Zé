@@ -1,0 +1,29 @@
+package aodjajda;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Aodjajda {
+
+    public static void main(String[] args) {
+        //variavel
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        //dados
+        double chico, ze;
+        int contador;
+        //Entrada de dados
+        contador = 0;
+        chico = 1.50;
+        ze = 1.10;
+        //processo
+        while (chico > ze) {
+            chico += 0.02;
+            ze += 0.03;
+            contador++;
+        }
+        //Saída de dados
+        System.out.println("quantos anos vai demorar para zé passar o chico:" + contador);
+    }
+}
+   
