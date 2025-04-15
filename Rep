@@ -1,0 +1,33 @@
+package EstouMaluco;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class EstouMaluco {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        //Declarando variáveis
+        int dentro, fora, contador, numero;
+        //Entrada de dados
+        contador = 0;
+        dentro = 0;
+        fora = 0;
+        //Repetição - Processamento 
+       while(contador <10){
+           System.out.print("Digite o " + (contador + 1) + "º valor: ");
+           numero = ler.nextInt();
+           if(numero >= 10 && numero <= 20) {
+                dentro++;
+            } else {
+                fora++;
+            }
+           contador ++;
+       }
+        //Saída de dados
+           System.out.println("Valores no intervalo de 10 e 20: " + dentro);
+           System.out.println("Valores fora do intervalo: " + fora);
+    }
+
+}
