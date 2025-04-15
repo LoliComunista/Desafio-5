@@ -1,0 +1,31 @@
+package MalditoWhile ;
+
+import java.util.Scanner;
+
+public class MalitoWhile {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner (System.in);
+        int op,sn, cn, cs;
+        cn = 0;
+        cs = 0;
+        op = 1;
+        while(op!= 0){
+            System.out.println("Digite 1 para continuar e 0 para parar.");
+            op = ler.nextInt();
+            if(op !=0){
+                System.out.println("Você gosta de tomate? (Sim 1 - 2 Não");
+                sn = ler.nextInt();
+                if(sn == 1){
+                    cs++;
+                }else{
+                    cn++;
+                }
+            }else{
+                System.out.println("Bye!");
+            }
+        }
+        System.out.println("Pessoas que gostam de tomate:" + cs);
+        System.out.println("Pessoas que não gostam:" + cn);
+    }
+    
+}
