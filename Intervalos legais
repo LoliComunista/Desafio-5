@@ -1,0 +1,47 @@
+package naosei;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class NaoSei {
+
+    public static void main(String[] args) {
+            //variaves
+               Scanner ler = new Scanpackagener(System.in);
+        DecimalFormat decimal = new DecimalFormat("0.00");
+        //Declarando variáveis
+        int intervalo1, intervalo2, intervalo3, intervalo4, numero, fora;
+        //Entrada de dados
+        intervalo1 = 0; 
+        intervalo2 = 0;
+        intervalo3 = 0;
+        intervalo4 = 0;
+        numero = 0;
+       
+       //Repetição - Processamento
+        while (numero >= 0) {
+            System.out.println("insira um número:  ");
+            numero = ler.nextInt();
+            if (numero >= 0 && numero <= 25) {
+                intervalo1++;
+            } else if (numero >= 26 && numero <= 50) {
+                intervalo2++;
+            } else if (numero >= 51 && numero <= 75) {
+                intervalo3++;
+            } else if (numero >= 76 && numero <= 100) {
+                intervalo4++;
+            }else if(numero >100){
+                fora++;
+            }
+        }
+
+        //Saída de dados
+        System.out.println("Resultados:");
+        System.out.println("[0 - 25]: " + intervalo1 + " números");
+        System.out.println("[26 - 50]: " + intervalo2 + " números");
+        System.out.println("[51 - 75]: " + intervalo3 + " números");
+        System.out.println("[76 - 100]: " + intervalo4 + " números");
+        System.out.println("Fora do padrão: " + fora);
+    }
+    
+}
