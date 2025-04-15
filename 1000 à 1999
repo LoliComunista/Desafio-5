@@ -1,0 +1,25 @@
+  package gordofreeman2;
+
+import java.util.Scanner;
+
+public class GordoFreeman2 {
+
+    public static void main(String[] args) {
+        // variavel
+        Scanner ler=new Scanner(System.in);
+        int num;
+        
+        //dados
+        num=1000;
+        
+        //processo
+        while(num<=1999){
+        if(num %11==5){
+            System.out.println("Numeros: "+num);
+        }
+        num++;  
+        }   
+        
+    }
+    
+}
